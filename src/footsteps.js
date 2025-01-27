@@ -68,6 +68,7 @@ export default class FootSteps {
     img.style.setProperty("animation-duration", `0.5s`);
 
     img.style.setProperty("position", "absolute");
+    img.style.setProperty("z-index", "999999");
     img.style.setProperty("top", `${y}px`);
     img.style.setProperty("left", `${x}px`);
     img.style.setProperty("user-select", `none`);
@@ -82,8 +83,8 @@ export default class FootSteps {
       x = touch.pageX;
       y = touch.pageY;
     } else if (e.type.includes(`mouse`)) {
-      x = e.clientX;
-      y = e.clientY;
+      x = e.pageX;
+      y = e.pageY;
     }
     return { x, y };
   }

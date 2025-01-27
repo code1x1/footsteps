@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wp:start": "WP_ENV_PORT=3333 wp-env start --update",
+    "wp:stop": "wp-env stop",
+    "wp:destroy": "wp-env destroy"
   },
   "devDependencies": {
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "@wordpress/env": "^10.16.0"
   }
 }
